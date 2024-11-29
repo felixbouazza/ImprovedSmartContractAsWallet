@@ -1,6 +1,7 @@
 # Wallet Smart Contract
 
-## Features
+## Features
+
 - __Deposit Funds__: Users can send Ether to their wallet using the receive() function.
 - __Send Transactions__: Wallet owners or allowed spenders can transfer Ether from the wallet to another address.
 - __Withdraw Funds__: Wallet owners or allowed withdrawers can withdraw Ether from the wallet to their own address.
@@ -8,7 +9,7 @@
 
 ## Contract Details
 
-### AddressWallet
+##### AddressWallet
 
 ```solidity
 struct AddressWallet {
@@ -27,7 +28,7 @@ Description:
 - __allowedWithdrawerNumber__ (uint): The number of addresses that are allowed to withdraw from this wallet.
 - __allowedWithdrawers__ (mapping): A mapping that tracks addresses that have withdrawal permission.
 
-### Wallets
+##### Wallets
 
 ```solidity
 mapping(address => AddressWallet) public wallets;
