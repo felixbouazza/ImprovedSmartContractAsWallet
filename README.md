@@ -7,7 +7,7 @@
 - __Withdraw Funds__: Wallet owners or allowed withdrawers can withdraw Ether from the wallet to their own address.
 - __Delegate Permissions__: Wallet owners can grant or revoke permissions to others for spending and withdrawing funds on their behalf.
 
-## Contract Details
+## Contract Details
 
 ##### AddressWallet
 
