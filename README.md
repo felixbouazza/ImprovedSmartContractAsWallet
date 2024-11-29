@@ -21,7 +21,6 @@ struct AddressWallet {
 }
 ```
 
-Description:
 - __balance__ (uint): The balance of Ether stored in the wallet.
 - __allowedSpenderNumber__ (uint): The number of addresses that are allowed to spend from this wallet.
 - __allowedSpenders__ (mapping): A mapping that tracks addresses that have spending permission.
@@ -34,4 +33,4 @@ Description:
 mapping(address => AddressWallet) public wallets;
 ```
 
-Description: This mapping stores the wallet data for each address. Each address has a corresponding AddressWallet struct that tracks the balance, allowed spenders, and allowed withdrawers.
+This mapping stores the wallet data for each address. Each address has a corresponding AddressWallet struct that tracks the balance, allowed spenders, and allowed withdrawers.
