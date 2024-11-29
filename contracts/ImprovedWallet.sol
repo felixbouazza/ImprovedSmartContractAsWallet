@@ -45,10 +45,11 @@ contract Wallets {
         _;
     }
 
-    function sendTransaction(address from, address to, uint amount) public onlyOwnerOrAllowedSpender(from) sufficientFunds(from, amount) {
+    function sendTransaction(address from, address to, uint amount, bytes memory payload) public onlyOwnerOrAllowedSpender(from) sufficientFunds(from, amount) returns (bytes memory) {
         wallets[from].balance -= amount;
-        (bool success, ) = to.call{value: amount, gas: 100000}("");
+        (bool success, bytes memory returnData) = to.call{value: amount}(payload);
         require(success, "Error when trying to call this address");
+        return returnData;
     }
 
     function withdraw(address from, uint amount) public onlyOwnerOrAllowedWithdrawer(from) sufficientFunds(from, amount) {
